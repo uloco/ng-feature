@@ -15,7 +15,6 @@
      * @param {string} name - Feature name of element
      * @param {string[]} [features] - Optional list of available features.
      */
-    // Directive
     function ngFeature() {
         return {
             restrict: 'E',
@@ -29,7 +28,6 @@
         };
     }
 
-    // Controller
     function NgFeatureController($scope, $ngFeature) {
         $scope.$watch('features', function (newValue) {
             if (angular.isDefined(newValue) && angular.isArray(newValue) && newValue.length > 0) {
@@ -46,7 +44,6 @@
         }
     }
 
-    // Services
     function $ngFeature() {
         /**
          * @type {String[]} - Available global feature list.
